@@ -5,7 +5,10 @@ description: Hypothesis-driven problem solving, MECE issue trees, quantitative 8
 
 # Structured Problem Solving
 
-Apply a hypothesis-first, MECE (Mutually Exclusive, Collectively Exhaustive) workflow before diving into data or implementation. See [references/frameworks.md](references/frameworks.md) for customizable lenses and math templates.
+Apply a hypothesis-first, MECE (Mutually Exclusive, Collectively Exhaustive) workflow before diving into data or implementation.
+
+- See [references/frameworks.md](references/frameworks.md) for customizable lenses and math templates.
+- See [references/research-and-execution.md](references/research-and-execution.md) for evidence calibration, execution speed dial, and incident triage (with [assets/postmortem.md](assets/postmortem.md)).
 
 ## 1. First Five Steps (Before Analysis)
 
