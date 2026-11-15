@@ -1,0 +1,43 @@
+# Sources cited in this skill
+
+`S#` = Hong Kong strengths, `W#` = shortfalls and remedies. Full bibliography: [../../sharp-agent/references/bibliography.md](../../sharp-agent/references/bibliography.md).
+
+- S5. Doing Business in Hong Kong — Babel Group. https://www.babelgroup.co.uk/resources/doing-business-in/doing-business-in-hong-kong/
+- S6. Hong Kong Culture: Communication — SBS Cultural Atlas. https://culturalatlas.sbs.com.au/hong-kong-culture/hong-kong-culture-communication
+- S7. Cultural Considerations in Hong Kong — Rivermate. https://www.rivermate.com/guides/hong-kong/cultural-considerations
+- S9. Guide to Cha Chaan Teng Food and Lingo — Ovolo Hotels. https://ovolohotels.com/ovolo/blog/guide-to-cha-chaan-teng-food-and-lingo/
+- S10. Cantonese Phrases You Need to Know in Hong Kong Restaurants — Time Out HK. https://www.timeout.com/hong-kong/things-to-do/cantonese-phrases-you-need-to-know-in-hong-kong-restaurants
+- S13. Six Things You Should Know When Eating Dim Sum in Hong Kong — Culture Trip. https://theculturetrip.com/asia/hong-kong/articles/six-things-you-should-know-when-eating-dim-sum-in-hong-kong
+- S14. The 10 Commandments of Dim Sum — Cold Tea Collective. https://coldteacollective.com/the-10-commandments-of-dim-sum/
+- S20. Hong Kong Markets for Every Type of Shopper — Cathay Pacific. https://www.cathaypacific.com/cx/en_PH/inspiration/shopping/hong-kong-markets-every-type-shopper.html
+- S25. Being Pragmatic in Hong Kong Doesn't Mean Losing Core Values — Hong Kong Free Press. https://hongkongfp.com/2015/09/04/being-pragmatic-in-hong-kong-doesnt-mean-losing-core-values/
+- S61. Hong Kong Culture – Business Culture — SBS Cultural Atlas. https://culturalatlas.sbs.com.au/hong-kong-culture/hong-kong-culture-business-culture
+- S75. The 3 Types of Hong Kong Trading Companies — QualityInspection.org. https://qualityinspection.org/hong-kong-trading-companies/
+- S77. Network Orchestration: Creating and Managing Global Supply Chains Without Owning Them — Wharton (Fung, Fung & Wind). https://faculty.wharton.upenn.edu/wp-content/uploads/2012/04/0904_Network_Orchestration_Creating_and_Managing.pdf
+- S78. Building a Company of Entrepreneurs — Korn Ferry Briefings. https://www.kornferry.com/insights/briefings-magazine/issue-1/62-building-a-company-of-entrepreneuers
+- S79. Li & Fung's Bruce Rockowitz: Managing Supply Chains in a Flat World — Knowledge at Wharton. https://knowledge.wharton.upenn.edu/article/li-fungs-bruce-rockowitz-managing-supply-chains-in-a-flat-world/
+- S80. Li & Fung 2006 — HBS case. https://store.hbr.org/product/li-fung-2006/307077
+- S84. Rule of law anchors Hong Kong on its journey ahead — HK Department of Justice. https://www.doj.gov.hk/en/community_engagement/speeches/20250630_sj1.html
+- S85. HK rises to third on competitiveness (IMD 2025) — news.gov.hk. https://www.news.gov.hk/eng/2025/06/20250617/20250617_103758_720.html
+- S91. Fearless at the worst of times: Hong Kong businessmen expand, start new ventures — SCMP. https://amp.scmp.com/news/hong-kong/hong-kong-economy/article/3081496/fearless-worst-times-hong-kong-businessmen-expand
+- S92. Lessons on Negotiation from Hong Kong Shop Aunties — Rabbit Hole Magazine. https://rabbitholemag.com/lessons-on-negotiation-from-hong-kong-shop-aunties/
+- S93. Negotiation style, speech accommodation and small talk in Sino-Western negotiations — PolyU. https://research.polyu.edu.hk/en/publications/negotiation-style-speech-accommodation-and-small-talk-in-sino-wes/
+- S94. Hong Kong's entrepreneurs are agile, have looked beyond borders — Business Standard (IANS). https://www.business-standard.com/article/news-ians/hong-kong-s-entrepreneurs-are-agile-have-looked-beyond-borders-117030500167_1.html
+- W14. Hong Kong's 'time is money' culture has killed courtesy — SCMP letter. https://amp.scmp.com/comment/letters/article/2159883/hong-kongs-time-money-culture-has-killed-courtesy-theres-no-need
+- W15. Explainer: What is Hong Kong's politeness drive all about? — SCMP. https://mcdn.i-scmp.com/news/hong-kong/hong-kong-economy/article/3265419/hong-kongs-politeness-drive-just-courtesy-call-amid-tourist-complaints-post-takes-look-past
+- W16. Restaurant once known as rudest in London provides hope for Hong Kong — SCMP. https://mcdn.i-scmp.com/opinion/article/3267660/restaurant-once-known-rudest-london-provides-hope-hong-kong
+- W26. A Matter of Perspective — Advisor Perspectives (Matthews Asia). https://www.advisorperspectives.com/commentaries/2013/05/17/a-matter-of-perspective
+- W27. Timely accounts push trade — SCMP. https://www.scmp.com/article/379598/timely-accounts-push-trade
+- W28. Corporate short-termism: a review and research agenda — CityU Scholars. https://scholars.cityu.edu.hk/en/publications/corporate-short-termism-a-review-and-research-agenda/
+- W29. Dissertation on Hong Kong property speculation — eScholarship (UC Berkeley). https://escholarship.org/uc/item/3r14d2r5
+- W30. Aim for productive investment — SCMP. https://amp.scmp.com/article/244946/aim-productive-investment
+- W31. Li Ka-shing warns against speculating in HK's property market — The Edge Markets. https://www.theedgemarkets.com/article/li-kashing-warns-against-speculating-hks-property-market-says-report
+- W32. Hong Kong SAR's Role in the GBA's Path to Becoming a Global Innovation Hub — HKU Business School. https://impact.hkubs.hku.hk/hong-kong-sars-role-in-the-gbas-path-to-becoming-a-global-innovation-hub/
+- W33. Hong Kong Wants to Bring Back Factory Jobs That Left Long Ago — Bloomberg. https://prod.cm.bloomberg.com/news/articles/2021-04-13/hong-kong-wants-to-bring-back-manufacturing-to-revive-its-economy
+- W34. Values education in Hong Kong: Problems and possibilities — EdUHK. https://repository.eduhk.hk/en/publications/values-education-in-hong-kong-problems-and-possibilities-4/
+- W47. Where companies with a long-term view outperform their peers — McKinsey Global Institute. https://www.mckinsey.com/featured-insights/long-term-capitalism/where-companies-with-a-long-term-view-outperform-their-peers
+- W60. 5,000 steel bars, not 25, affected in MTR corner-cutting scandal — HKFP. https://www.hongkongfp.com/2018/06/26/5000-steel-bars-not-25-affected-mtr-corner-cutting-scandal-lawmaker-claims/
+- W71. Verint/Ipsos Consumer Insights APAC — Ipsos. https://www.ipsos.com/sites/default/files/2017-07/Verint_Ipsos_Consumer-Insights_Deck_APAC_0.pdf
+- W76. Long-term orientation (Hofstede): Hong Kong profile — Cyborlink. https://www.cyborlink.com/besite/hong_kong.htm
+- W97. Postmortem culture: learning from failure — Google SRE Book. https://sre.google/sre-book/postmortem-culture/
+- W100. Handbook-first communication — GitLab. https://handbook.gitlab.com/handbook/company/culture/all-remote/handbook-first/
