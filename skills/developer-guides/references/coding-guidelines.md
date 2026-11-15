@@ -20,7 +20,7 @@ Examples of good questions:
 ## 2. Simplicity First
 
 - No features beyond what was asked.
-- No abstractions for single-use code.
+- Share code at the second caller when both use it unchanged; wait for a third caller when sharing would need a new parameter, flag or branch.
 - No "flexibility" or "configurability" that was not requested.
 - No error handling for impossible scenarios.
 - If you wrote 200 lines and it could be 50, rewrite it.

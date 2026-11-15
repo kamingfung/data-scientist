@@ -41,7 +41,7 @@ Every push runs CI, and every push or comment emails all default reviewers.
 Applies to PR comments and Confluence report comments. Adapted from "How to write a rebuttal letter", Nat. Methods 23, 1919 (2026), doi:10.1038/s41592-026-03261-0.
 
 - Open the round's summary with a short list of the main changes.
-- Answer every comment, including a nit you acted on (point to the change); resolve a nit you skip without a reply. Disagree politely with a reason; if you cannot make a requested change, say why.
+- Answer every comment, including a nice-to-have you acted on (point to the change); resolve a nice-to-have you skip without a reply. Disagree politely with a reason; if you cannot make a requested change, say why.
 - Keep replies short, with no per-comment thanks. If a comment is unclear, say so and state how you read it.
 - Answer a point raised by two reviewers once, and link that answer from the other thread.
 - Point to the change (commit, `file:line`, section, figure) instead of pasting it.
