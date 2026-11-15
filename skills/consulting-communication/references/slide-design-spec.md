@@ -1,6 +1,6 @@
-# McKinsey Slide Design Specification
+# Consulting Slide Design Specification
 
-Empirical layout geometry, palette, and exhibit patterns extracted from 30 McKinsey `.pptx` decks.
+Layout geometry, palette, and exhibit patterns for executive and consulting decks.
 
 ## 1. Exact Slide Coordinates (`13.333" × 7.500"`)
 

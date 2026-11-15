@@ -22,7 +22,15 @@
 3. **Give one concrete proof point:** back the pillar with one quantified fact or short analogy (Scorsese Principle).
 4. **Stop talking (No-Tailgating):** pause cleanly instead of trailing off with caveats or over-explaining.
 
-## 4. Handling Difficult or Hostile Questions
+## 4. Handling Difficult Questions
 
 - **Never repeat a negative premise:** reframe onto the positive goal or factual baseline before answering.
 - **Separate unknown facts from known boundaries:** if data is missing, state what is known, what is unknown, and the exact next check to resolve it.
+
+## 5. Executive Status Updates & Stakeholder Alignment
+
+- **Status Update Format:**
+  - **Status / Decision:** 1 sentence (`On track` / `At risk` / `Needs decision: X`).
+  - **What Changed:** 2–3 quantified bullets since the last update.
+  - **Blockers & Next Actions:** `[Owner] — [Action] by [YYYY-MM-DD]`.
+- **Stakeholder Alignment:** anchor on shared business objectives, separate people from options, and quantify trade-offs (cost, timeline, risk) before recommending a path.

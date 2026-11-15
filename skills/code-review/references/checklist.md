@@ -1,13 +1,8 @@
----
-name: code-review-checklist
-description: Use when reviewing a pull request or self-reviewing a branch before merge.
----
-
 # Code Review Checklist
 
-Manual checklist for PR review. Reference with `#code-review-checklist`.
+Manual checklist for PR review.
 The detailed rules behind each item live in the `developer-guides` references
-(`../developer-guides/references/code_style.md`, `../developer-guides/references/unit_test.md`, `../developer-guides/references/logging.md`).
+(`../../developer-guides/references/code_style.md`, `../../developer-guides/references/unit_test.md`, `../../developer-guides/references/logging.md`).
 
 ## Reviewer conduct
 
@@ -16,7 +11,7 @@ Applies to PRs and to Confluence experiment reports. Adapted from "The good refe
 - [ ] Access blockers (unpushed branch, missing data or permissions) raised first, and the parts you cannot judge named up front
 - [ ] Value: the work addresses a real problem and places itself against prior work (earlier tickets, changelogs, existing code)
 - [ ] Soundness: baseline or control, statistics, benchmark against the current approach, conclusions backed by the data, limitations stated
-- [ ] Reproducible from the PR or page alone: pushed branch and commit, data pull date, MLflow run ids, the command to rerun (`../developer-guides/references/writing_standards.md` Structure and Evidence)
+- [ ] Reproducible from the PR or page alone: pushed branch and commit, data pull date, MLflow run ids, the command to rerun (`../../developer-guides/references/writing_standards.md` Structure and Evidence)
 - [ ] Code, config and data the work describes were read; the author's run evidence (the backtest item under Behavior) was rerun when missing or when a result is surprising, and otherwise a finding from reading code only says so
 - [ ] Design and logic findings come before style and edge cases
 - [ ] Essentials only, not a wish list; findings numbered and labeled must-fix, should-fix or nit
@@ -54,7 +49,7 @@ Applies to PRs and to Confluence experiment reports. Adapted from "The good refe
 - [ ] DataFrame returns list output columns: `|col1|col2|`
 - [ ] Docstring explains _why_, code shows _what_
 - [ ] Model and dataset docs updated when behavior, params or datasets change, including how a config value is set and how to update it
-- [ ] New terms in docstrings, comments and the PR description reuse existing ones or are defined at first use (`../developer-guides/references/writing_standards.md` Terminology)
+- [ ] New terms in docstrings, comments and the PR description reuse existing ones or are defined at first use (`../../developer-guides/references/writing_standards.md` Terminology)
 - [ ] Inline comments are concise — no multi-line explanations; detailed context goes to `docs/` (if stable/reproducible) or the PR description (if branch-specific)
 - [ ] No ticket ids or dates in code comments, docstrings, tests or doc headings
 - [ ] Comments, docstrings, docs and the PR description match the code: every named reader or behavior was checked by reading the code or `git grep`

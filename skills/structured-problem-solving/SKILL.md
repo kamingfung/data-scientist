@@ -29,4 +29,6 @@ Apply a hypothesis-first, MECE (Mutually Exclusive, Collectively Exhaustive) wor
 - **Lead with a binary recommendation:** open with `Yes` / `No` or the single recommended option, never a chronological recap of steps taken.
 - **Support with at most three quantified facts:** list the three strongest pieces of evidence, ordered by impact.
 - **Name risks and mitigations:** state the top 1–2 assumptions that could invalidate the recommendation and how to monitor them.
+- **Run a pre-mortem before irreversible steps:** move fast on reversible changes, but verify assumptions and isolate blast radius before irreversible actions.
+- **Verify before claiming done:** confirm outputs, edge cases, and assumptions with actual evidence—never relax or bypass a check.
 - **Propose concrete next steps:** end with immediate, owner-assigned actions and the decision or analysis needed next.
