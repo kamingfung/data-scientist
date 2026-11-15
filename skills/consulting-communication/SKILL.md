@@ -9,6 +9,8 @@ Deliver executive readouts, status updates, Q&A responses, and consulting-grade 
 
 - See [references/summaries-and-qa.md](references/summaries-and-qa.md) for summary formulas, status updates, table transforms, and Q&A scripts.
 - See [references/slide-design-spec.md](references/slide-design-spec.md) for 16:9 consulting slide geometry, typography, palette, and exhibit patterns.
+- See [references/concise-communication.md](references/concise-communication.md) for brevity without curtness, bad news first, and the status-update template in [assets/status-update.md](assets/status-update.md).
+- See [references/negotiation.md](references/negotiation.md) for negotiation prep and commercial recommendations, with [assets/negotiation-prep.md](assets/negotiation-prep.md).
 - For a deck built as HTML from data, use [../html-data-deck/SKILL.md](../html-data-deck/SKILL.md); its density, palette and theme rules replace the ones in section 3 here.
 
 ## 1. Executive Summaries, Updates & Q&A
