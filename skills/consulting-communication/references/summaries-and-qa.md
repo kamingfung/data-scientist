@@ -29,8 +29,8 @@
 
 ## 5. Executive Status Updates & Stakeholder Alignment
 
-- **Status Update Format:**
-  - **Status / Decision:** 1 sentence (`On track` / `At risk` / `Needs decision: X`).
-  - **What Changed:** 2–3 quantified bullets since the last update.
-  - **Blockers & Next Actions:** `[Owner] — [Action] by [YYYY-MM-DD]`.
+- **Concise, not curt:** spend one clause acknowledging context, then deliver the solution and anticipate the next need.
+- **Bad news first, in full:** report the full scope, impact, and unverified boundaries upfront rather than minimizing numbers.
+- **Code-switch by audience:** stay direct and technical with peers/engineers; add framing and constructive exits with executives or external partners.
+- **Status Update Format:** use [../assets/status-update.md](../assets/status-update.md) (`Status / Decision` → `What changed` → `Blockers / Owner / Next date`).
 - **Stakeholder Alignment:** anchor on shared business objectives, separate people from options, and quantify trade-offs (cost, timeline, risk) before recommending a path.
