@@ -77,7 +77,7 @@ Default to `fileMatch`. Use `always` only for behavioral guidelines that transce
 - **One rule per bullet.** If a bullet has "and", split it.
 - **No redundancy across files.** Before adding a rule, grep existing steering files. If it exists, don't duplicate — reference the file by name if needed.
 - **Examples earn their space.** Include a good/bad pair only when the rule is genuinely ambiguous. Skip examples for obvious rules like "add type hints."
-- **Domain-specific over generic.** "Log farm, variety, and season in WARNING messages" beats "Include context in log messages."
+- **Domain-specific over generic.** "Log customer, region, and period in WARNING messages" beats "Include context in log messages."
 
 ## Anti-Patterns
 

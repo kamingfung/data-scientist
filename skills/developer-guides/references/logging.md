@@ -4,7 +4,7 @@ Standards for structured, actionable logging across Kedro pipelines.
 
 ## 1. Key Rules
 
-- Use `logging.getLogger(__name__)` consistently at module top.
+- Use one shared project logger, created once and imported where needed; do not call `logging.getLogger` in each module.
 - Never log secrets, passwords, API keys, tokens, or PII.
 - Only log what Kedro does not already emit.
 

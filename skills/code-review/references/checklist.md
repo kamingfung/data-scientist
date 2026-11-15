@@ -14,7 +14,8 @@ Applies to PRs and to Confluence experiment reports. Adapted from "The good refe
 - [ ] Reproducible from the PR or page alone: pushed branch and commit, data pull date, MLflow run ids, the command to rerun (`../../developer-guides/references/writing_standards.md` Structure and Evidence)
 - [ ] Code, config and data the work describes were read; the author's run evidence (the backtest item under Behavior) was rerun when missing or when a result is surprising, and otherwise a finding from reading code only says so
 - [ ] Design and logic findings come before style and edge cases
-- [ ] Essentials only, not a wish list; findings numbered and labeled must-fix, should-fix or nit
+- [ ] Essentials only, not a wish list; findings numbered and labeled ❌ must-fix, ⚠️ should-fix or 🤔 nice-to-have (never colored circles, which rely on color alone)
+- [ ] Written review capped at three rounds; if a must-fix is still open after round 3, stop and meet the author
 - [ ] A repeated issue is flagged once, inline at its first instance, asking for every instance to be fixed
 - [ ] Grammar raised only when it hides what was done; the tone critiques the work, never the author's competence
 
@@ -44,7 +45,7 @@ Applies to PRs and to Confluence experiment reports. Adapted from "The good refe
 
 ## Documentation
 
-- [ ] Google-style docstrings on all functions
+- [ ] Google-style docstrings on every public function, and on any private function whose purpose is not clear from its name and signature
 - [ ] `Args:`, `Returns:` filled in
 - [ ] DataFrame returns list output columns: `|col1|col2|`
 - [ ] Docstring explains _why_, code shows _what_
@@ -68,7 +69,7 @@ Applies to PRs and to Confluence experiment reports. Adapted from "The good refe
 - [ ] Tests follow AAA pattern (Arrange / Act / Assert)
 - [ ] Keyword arguments when calling the function under test
 - [ ] Required edge cases: empty DataFrame, single row, NaN, boundary values
-- [ ] Realistic domain data (varieties: POP, BEAUTY, BIANCA; farms: A9, C5, C6, LN)
+- [ ] Realistic domain data (real category values from the project, not `foo` / `bar`)
 - [ ] No mocking of DataFrames or Pandera schema checks
 - [ ] `pd.testing.assert_frame_equal` for DataFrame comparison
 - [ ] No existing test edited to match new output, deleted, or marked `xfail`/`skip` without the reason in the commit message
@@ -79,8 +80,8 @@ Applies to PRs and to Confluence experiment reports. Adapted from "The good refe
 - [ ] Specific `except` clauses, no bare `except:`
 - [ ] Error messages include context (dataset name, inputs, offending rows)
 - [ ] No silent fallbacks (`fillna` substitute, `errors="ignore"`, `dropna`, last-write-wins); a deliberate one logs how many rows it touched
-- [ ] Uses `kedro_logger` from `global_utils`
-- [ ] WARNING/ERROR logs include farm, variety, season where applicable
+- [ ] Uses the project's one shared logger, not module-local `logging.getLogger` calls
+- [ ] WARNING/ERROR logs name the entity, the time window and the row count
 - [ ] No `f-strings` in log calls — use lazy `%` formatting
 - [ ] No secrets or PII in logs
 
