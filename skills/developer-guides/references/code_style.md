@@ -51,7 +51,7 @@ def filter_shuttles(df: pd.DataFrame, types: list[str] | None = None) -> pd.Data
 - **Keep signatures small (`≤5` arguments):** group related parameters into a `dict` or dataclass when larger.
 - **Keyword arguments for `>2` arguments:** use keyword arguments in both `src/` and `tests/` so signature reordering cannot silently swap values.
 - **No boolean flag parameters:** split `f(x, flag=True)` into two clearly named functions.
-- **Google-style docstrings:** start the summary on a new line after `"""`, include types in the signature, and list output DataFrame columns in `Returns:` separated by `|`.
+- **Google-style docstrings** on every public function, and on any private function whose purpose is not clear from its name and signature: start the summary on a new line after `"""`, include types in the signature, and list output DataFrame columns in `Returns:` separated by `|`.
 
 ## 3. Top-Down Function Ordering
 
@@ -116,7 +116,7 @@ def weighted_mean_price(
 ## 6. Constants & Scalability
 
 - Keep a constant local to its function until a second function reads it; then move it to module top or a shared constants module annotated `Final` (`MAX_CAPACITY: Final[int] = 1_000`).
-- Use an `Enum` when the set of values is closed and callers must handle every member.
+- Group related constants in one immutable container (namedtuple, frozen dataclass or `Enum`); use an `Enum` when the set of values is closed and callers must handle every member.
 - Profile before optimizing (use `ProfileHook`); optimize in order: vectorized pandas/NumPy operations -> parallel execution ([parallelism.md](parallelism.md)) -> targeted algorithmic changes. Never iterate row-by-row with `.iterrows()`.
 
 ## Where explanation belongs

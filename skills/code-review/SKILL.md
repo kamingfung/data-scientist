@@ -10,7 +10,8 @@ Review the target diff, branch, or PR against [references/checklist.md](referenc
 ## Workflow
 
 1. **Flag access blockers first:** note unpushed branches, missing data, or parts you cannot verify.
-2. **Verify soundness before style:** check logic, baselines, data contracts, and reproducibility before formatting or nits.
+2. **Verify soundness before style:** check logic, baselines, data contracts, and reproducibility before formatting or polish.
 3. **Anchor findings inline:** cite exact files and lines; flag repeated issues once at the first instance.
-4. **Label every finding:** `must-fix` (bug, broken test, data-integrity risk), `should-fix` (style, docs, over-engineering), or `nit` (minor polish).
-5. **Deliver to chat** unless asked to post directly to a PR.
+4. **Label every finding:** `must-fix` (bug, broken test, data-integrity risk), `should-fix` (style, docs, over-engineering), or `nice-to-have` (minor polish). Put the icon next to its word: ❌ must-fix, ⚠️ should-fix, 🤔 nice-to-have. Never use colored circles; they rely on color alone.
+5. **Cap written review at three rounds:** if a must-fix is still open after round 3, stop and meet the author.
+6. **Deliver to chat** unless asked to post directly to a PR.

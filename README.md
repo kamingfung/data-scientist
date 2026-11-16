@@ -17,5 +17,5 @@ Self-contained agent plugin for data science engineering, structured problem sol
 Symlink this repository into `~/.gemini/config/plugins/data-scientist`:
 
 ```bash
-ln -sfn /Users/fkm/GitHub/data-scientist ~/.gemini/config/plugins/data-scientist
+ln -sfn /path/to/data-scientist ~/.gemini/config/plugins/data-scientist
 ```
