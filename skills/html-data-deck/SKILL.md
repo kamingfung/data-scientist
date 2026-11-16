@@ -67,7 +67,7 @@ Workshop mode relaxes the rest:
   - **Timeline**: one row of dated markers for what was tried, labeled with the outcome icon (✅ kept, ✖ dropped, ⏸ open), color plus shape.
   - **Option map**: a 2×2 (for example effort × control) or side-by-side cards, one per option, with its upside and its failure mode.
   - **Roadmap**: swim lanes by team across months, with gates as diamonds.
-  - **Question slide**: one question as the title, 2–3 prompts, and an empty ecru panel labeled "Notes from the room" for live capture.
+  - **Question slide**: one question as the title, 2–3 prompts, and an empty panel labeled "Notes from the room" for live capture.
 - Keep the action title, but it may end in a question when the slide asks the room ("Which overrides do you make today, and why?").
 
 ## Slide anatomy
@@ -85,14 +85,14 @@ Body blocks:
 
 - **KPI tiles** (`.tiles`, 2–5 tiles): label, value with unit, and a sub line with the range or share ("five fits +A to +B", "C% of the loss (slide 5.7)"). A loss value takes class `neg`.
 - **Definition strip** under the tiles (`<p class="small">`): bold what the estimate is, then define every term the tiles use.
-- **What happened / Why** (`.cols.compact`, `two_cols()`): two filled rounded cards side by side, ecru for What happened and light purple tint for Why, equal height, filling the body; 3–4 bullets each in large type; every bullet carries its number and ends with the slide it is proven on ("(slide&nbsp;5.5)", a non-breaking space keeps it on one line).
+- **What happened / Why** (`.cols.compact`, `two_cols()`): two filled rounded cards side by side, the panel color for What happened and the light tint for Why, equal height, filling the body; 3–4 bullets each in large type; every bullet carries its number and ends with the slide it is proven on ("(slide&nbsp;5.5)", a non-breaking space keeps it on one line).
 - **Executive summary** (`.exec`, `exec_summary()`): one lead sentence, then 3–4 numbered sections; each has a bold heading that carries the message alone and 1–2 bullets of a bold run-in label plus one short sentence. About 60–90 words, large type for the back of the room.
-- **Key takeaways panel** (`.with-take`, `takeaways()`): the chart keeps the left 3/4; an ecru panel on the right holds 2–3 points, each a bold run-in label plus one sentence ("**Winning weeks:** 15 of 23 peak weeks within 10%", numbers as placeholders), and ends in an ink "Next: …" arrow tag that leads into the next slide.
+- **Key takeaways panel** (`.with-take`, `takeaways()`): the chart keeps the left 3/4; a panel on the right holds 2–3 points, each a bold run-in label plus one sentence ("**Winning weeks:** 15 of 23 peak weeks within 10%", numbers as placeholders), and ends in an ink "Next: …" arrow tag that leads into the next slide.
 - Charts fill their slot: full body, or the left 3/4 next to takeaways; never a fixed-size chart with empty space below. Pass `box=deck.SLOTS["full" | "take" | "half"]` to every `charts.py` builder and wrap the chart in `<div class="fill">`; the builder lays out axes, nice ticks and labels for that box at normal text size.
 - Fill the slot, not the slide: keep a clear margin of at least 16px between the chart and every neighbor (title block, takeaways panel, side text, `.note`, `.assume`, footer). Shrink the slot height by the height of any `.note` or `.assume` on the same slide; the footer sits absolutely at the bottom, so the chart must end above its top rule. Keep axis labels, value labels, end labels and the legend inside the SVG `viewBox` with inner padding, so nothing bleeds past the chart's own edge into a neighbor.
 - On a chart-plus-text slide (one chart with side bullets or takeaways), give the chart 2/3 to 3/4 of the width (grid about `3fr 1fr`) and set the side text at about 17px, not the 13.5px compact list.
 - **Chart:** inline SVG with `viewBox` and `width="100%"`, `role="img"`, value labels on the bars, legend in its own row so labels never collide. No `<img>`, no raster, no chart library.
-- **Table:** `table()` helper; numeric columns right-aligned, tabular figures; header row on ecru.
+- **Table:** `table()` helper; numeric columns right-aligned, tabular figures; header row on the panel color.
 - **The ask** (slide 1): table `Owner | Ask | Why, from this analysis | DRI | By when`; one owner, one action, one date per row; the "why" cites a number and a slide. Take owners and dates from the requester, never invent them.
 
 Deck order that works: title, `0 · Executive summary`, `0.1 · Headline` (tiles and What happened / Why), `1 · The ask`, `1.1 · What changed since <earlier versions>` (when the deck supersedes one), the story chapters, `Backup · How we measured it`, `Appendix · Caveats and terms`.
@@ -110,11 +110,11 @@ Deck order that works: title, `0 · Executive summary`, `0.1 · Headline` (tiles
 
 ## Colors
 
-- Use the house tokens in `template/deck.css`: ink `#4A1B5F` text and totals, purple `#6B2B8D` labels, blue `#4169E1` gains, red `#E53935` losses, light `#B895D4` baselines and rules, ecru `#F5F1E8` panels, gray `#9E9E9E` unexplained.
-- For categorical series use `#4A1B5F`, `#4169E1`, `#E53935`, `#B895D4` in that order; it is the colorblind-safe order.
+- Use the tokens in `template/deck.css`: ink `#1F2A44` text and totals, accent `#3A5A8C` labels, blue `#00669E` gains, red `#B83A1B` losses, light `#A8B3C7` baselines and rules, panel `#F2F4F7` panels, tint `#E6EEF7` the second card, gray `#9E9E9E` unexplained. Swap the values for your own brand, and keep text contrast at 4.5:1 or more on white, panel and tint.
+- For categorical series use ink, blue, red, light in that order: they differ in lightness as well as hue, so they stay apart for colorblind readers.
 - Color by meaning first: when a color has a fixed meaning in your domain (for example red for loss), keep it on every slide.
 - Pair every color with a second encoding: hatch for low confidence, whisker for range, dashed for baseline, or a direct label.
-- In each chart, give one accent color to the evidence the title claims; draw context in neutrals (light `#B895D4`, gray `#9E9E9E`). Semantic colors win where the meaning is fixed. Remove series, labels and gridlines that do not help the comparison.
+- In each chart, give one accent color to the evidence the title claims; draw context in neutrals (light, gray). Semantic colors win where the meaning is fixed. Remove series, labels and gridlines that do not help the comparison.
 - Keep text contrast at least 4.5:1, or 3:1 for large text.
 
 ## Sources

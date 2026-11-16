@@ -3,15 +3,15 @@
    stacks, so the file renders offline with no font payload.
    Slides are fixed 1280x720; deck.js scales them to the window. */
 :root{
-  --ink:#4A1B5F;     /* titles, body text, totals */
-  --purple:#6B2B8D;  /* kicker, h3, notes, value labels */
-  --blue:#4169E1;    /* gain / proposed arm */
-  --red:#E53935;     /* loss / negative KPI */
-  --light:#B895D4;   /* rules, footer, baseline bars */
-  --ecru:#F5F1E8;    /* tile, table header, assumptions box */
+  --ink:#1F2A44;     /* titles, body text, totals */
+  --accent:#3A5A8C;  /* kicker, h3, notes, value labels */
+  --blue:#00669E;    /* gain / proposed arm */
+  --red:#B83A1B;     /* loss / negative KPI */
+  --light:#A8B3C7;   /* rules, footer, baseline bars */
+  --panel:#F2F4F7;    /* tile, table header, assumptions box */
   --gray:#9E9E9E;    /* unexplained / residual */
   --paper:#FFFFFF;
-  --tint:#EFE8F4;    /* "Why" card, a light purple tint */
+  --tint:#E6EEF7;    /* "Why" card, a light blue tint */
   --display:"Avenir Next","Helvetica Neue",Helvetica,"Segoe UI",Arial,sans-serif;
   --text:Charter,"Iowan Old Style","Source Serif 4",Georgia,Cambria,serif;
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
@@ -21,28 +21,28 @@ html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact;margin:0;bac
 .wrap{width:calc(1280px*var(--s));height:calc(720px*var(--s))} .wrap .slide{transform:scale(var(--s));transform-origin:top left}
 .slide{width:1280px;height:720px;background:var(--paper);box-sizing:border-box;padding:40px 56px 44px;position:relative;display:flex;flex-direction:column;border-radius:4px}
 header{margin-bottom:18px}
-.kicker{margin:0 0 8px;font:500 13px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--purple)} .kicker code{font:inherit;letter-spacing:0;text-transform:none}
+.kicker{margin:0 0 8px;font:500 13px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)} .kicker code{font:inherit;letter-spacing:0;text-transform:none}
 h1{margin:0;font:700 30px/1.14 var(--display);letter-spacing:-.018em;color:var(--ink);text-wrap:balance}
-h3{margin:10px 0 6px;font:600 16px var(--display);color:var(--purple)}
+h3{margin:10px 0 6px;font:600 16px var(--display);color:var(--accent)}
 .body{flex:1;min-height:0;font-size:16px;line-height:1.45;overflow:hidden}
 .wf{max-width:900px;margin:0 auto} .compact table{font-size:12.5px} .compact td,.compact th{padding:3px 6px} .compact ul{font-size:14.5px}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-ul{margin:4px 0 0 18px;padding:0} li{margin:0 0 7px} li::marker{color:var(--purple)}
+ul{margin:4px 0 0 18px;padding:0} li{margin:0 0 7px} li::marker{color:var(--accent)}
 /* the source fixed repeat(5,1fr); one row of any tile count instead */
 .tiles{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:14px;margin-bottom:16px}
-.tile{background:var(--ecru);border-radius:6px;padding:12px 14px;border-left:3px solid var(--purple)}
-.tile .label{font:600 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--purple)}
+.tile{background:var(--panel);border-radius:6px;padding:12px 14px;border-left:3px solid var(--accent)}
+.tile .label{font:600 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 .tile .num{margin:6px 0 4px;font:800 34px/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
-.tile .sub{font-size:13px;line-height:1.35;color:var(--purple)}
+.tile .sub{font-size:13px;line-height:1.35;color:var(--accent)}
 .neg{color:var(--red)}
 table{border-collapse:collapse;width:100%;font:13.5px/1.35 var(--display);font-variant-numeric:tabular-nums}
 th,td{padding:5px 8px;border-bottom:1px solid var(--light);text-align:left;vertical-align:top} td.num{text-align:right}
-th{background:var(--ecru);font:600 12px var(--mono);letter-spacing:.02em;color:var(--purple);border-bottom:1px solid var(--ink)}
-.note{margin:8px 0 0;font-size:14px;color:var(--purple)} .small{font-size:13px;color:var(--purple)}
-.assume{margin:8px 0 0;padding:6px 10px;font-size:12.5px;line-height:1.4;color:var(--ink);background:var(--ecru);border-left:4px solid var(--light);border-radius:3px}
-.eq{background:var(--ecru);border-radius:4px;padding:8px 12px;margin:6px 0;font:14px var(--mono);overflow-x:auto}
+th{background:var(--panel);font:600 12px var(--mono);letter-spacing:.02em;color:var(--accent);border-bottom:1px solid var(--ink)}
+.note{margin:8px 0 0;font-size:14px;color:var(--accent)} .small{font-size:13px;color:var(--accent)}
+.assume{margin:8px 0 0;padding:6px 10px;font-size:12.5px;line-height:1.4;color:var(--ink);background:var(--panel);border-left:4px solid var(--light);border-radius:3px}
+.eq{background:var(--panel);border-radius:4px;padding:8px 12px;margin:6px 0;font:14px var(--mono);overflow-x:auto}
 .ex{font-size:13.5px} .ex table{font-size:12.5px}
-footer{position:absolute;bottom:12px;left:56px;right:56px;display:flex;justify-content:space-between;gap:16px;padding-top:6px;border-top:1px solid var(--ecru);font:11px var(--mono);color:var(--purple)}
+footer{position:absolute;bottom:12px;left:56px;right:56px;display:flex;justify-content:space-between;gap:16px;padding-top:6px;border-top:1px solid var(--panel);font:11px var(--mono);color:var(--accent)}
 footer::after{content:attr(data-n);white-space:nowrap}
 .hint{color:#bbb;text-align:center;font:12px var(--mono)}
 @media print{@page{size:1280px 720px;margin:0} html,body{background:white} .deck{padding:0;gap:0;--s:1!important} .slide{page-break-after:always;border-radius:0} .hint{display:none}}
@@ -52,7 +52,7 @@ footer::after{content:attr(data-n);white-space:nowrap}
 .corr-badge[aria-expanded=true]{background:#fff;color:var(--red)}
 .corr-badge:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .corr-panel{position:absolute;top:50px;right:18px;z-index:4;width:520px;max-height:600px;overflow:auto;padding:12px 16px;background:#fff;border:2px solid var(--red);border-left-width:8px;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.25);font-size:14px;line-height:1.4;color:var(--ink)}
-.corr-panel h4,.corr-print h4{margin:8px 0 4px;font-size:15px;color:var(--purple)} .corr-panel h4:first-child{margin-top:0}
+.corr-panel h4,.corr-print h4{margin:8px 0 4px;font-size:15px;color:var(--accent)} .corr-panel h4:first-child{margin-top:0}
 .corr-panel p,.corr-print p{margin:0 0 6px}
 .corr-print{display:none}
 @media print{.corr-badge,.corr-panel{display:none} .slide.has-corr{page-break-after:auto} .corr-print{display:block;width:1280px;box-sizing:border-box;padding:12px 48px;font-size:13px;line-height:1.4;color:var(--ink);border-left:8px solid var(--red);page-break-after:always}}
@@ -60,16 +60,16 @@ footer::after{content:attr(data-n);white-space:nowrap}
 /* ---- Slide types and optional interactivity (SKILL.md lists each) ---- */
 /* SVG charts color by class, so a token change recolors them */
 svg.chart{display:block;font-family:var(--display);font-size:12px;overflow:visible}
-svg.chart text{fill:var(--ink)} svg.chart text.m{fill:var(--purple)} svg.chart text.on{fill:var(--paper)}
-.f-ink{fill:var(--ink)} .f-purple{fill:var(--purple)} .f-blue{fill:var(--blue)} .f-red{fill:var(--red)} .f-light{fill:var(--light)} .f-gray{fill:var(--gray)} .f-ecru{fill:var(--ecru)} .f-paper{fill:var(--paper)} .f-none{fill:none}
-.s-paper{stroke:var(--paper)} .s-ink{stroke:var(--ink)} .s-purple{stroke:var(--purple)} .s-blue{stroke:var(--blue)} .s-red{stroke:var(--red)} .s-light{stroke:var(--light)} .s-gray{stroke:var(--gray)}
+svg.chart text{fill:var(--ink)} svg.chart text.m{fill:var(--accent)} svg.chart text.on{fill:var(--paper)}
+.f-ink{fill:var(--ink)} .f-accent{fill:var(--accent)} .f-blue{fill:var(--blue)} .f-red{fill:var(--red)} .f-light{fill:var(--light)} .f-gray{fill:var(--gray)} .f-panel{fill:var(--panel)} .f-paper{fill:var(--paper)} .f-none{fill:none}
+.s-paper{stroke:var(--paper)} .s-ink{stroke:var(--ink)} .s-accent{stroke:var(--accent)} .s-blue{stroke:var(--blue)} .s-red{stroke:var(--red)} .s-light{stroke:var(--light)} .s-gray{stroke:var(--gray)}
 .dash{stroke-dasharray:6 4} .hit{fill:transparent;cursor:crosshair} [data-tip]:hover{opacity:.75}
 /* a number filled from data; hover shows its source (interact.js) */
 .n{font-variant-numeric:tabular-nums;border-bottom:1px dotted var(--light);cursor:help}
 /* title slide and section divider */
 .cover{justify-content:flex-end;padding-bottom:72px} .cover h1{font-size:60px;font-weight:800;line-height:1;letter-spacing:-.03em;max-width:20ch}
 .cover .body{flex:0 0 auto} .lead{font-size:20px;line-height:1.45;max-width:62ch;margin:14px 0 0}
-.meta{display:flex;flex-wrap:wrap;gap:6px 28px;margin-top:22px;padding-top:12px;border-top:1px solid var(--ink);font:13px var(--mono);color:var(--purple)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 28px;margin-top:22px;padding-top:12px;border-top:1px solid var(--ink);font:13px var(--mono);color:var(--accent)}
 /* one big number */
 .big{display:flex;flex-direction:column;justify-content:center;height:100%;max-width:62ch}
 .big-num{font:800 150px/1 var(--display);letter-spacing:-.045em;font-variant-numeric:tabular-nums}
@@ -77,18 +77,18 @@ svg.chart text{fill:var(--ink)} svg.chart text.m{fill:var(--purple)} svg.chart t
 /* What happened / Why (two_cols() default): two filled cards that fill the body */
 .body:has(>.cols.compact){display:flex;flex-direction:column} .body>.cols.compact{flex:1;min-height:0}
 .cols.compact{gap:24px;align-items:stretch}
-.cols.compact>div{display:flex;flex-direction:column;background:var(--ecru);border-radius:12px;padding:26px 32px} .cols.compact>div+div{background:var(--tint)}
+.cols.compact>div{display:flex;flex-direction:column;background:var(--panel);border-radius:12px;padding:26px 32px} .cols.compact>div+div{background:var(--tint)}
 .cols.compact h3{margin:0 0 10px;font-size:32px;color:var(--ink)} .cols.compact ul{flex:1;display:flex;flex-direction:column;justify-content:space-evenly;margin:0 0 0 24px;font-size:27px;line-height:1.35} .cols.compact li{margin:0}
 .tiles+.cols.compact h3{font-size:24px} .tiles+.cols.compact ul{font-size:21px} .tiles+.cols.compact>div{padding:18px 26px}
 /* executive summary: bigger type, read from the back of the room */
 .exec{display:flex;flex-direction:column;height:100%} .exec-lead{margin:0 0 18px;font-size:30px;line-height:1.3}
 .exec ol{flex:1;list-style:none;counter-reset:s;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:20px 48px;align-content:space-evenly}
 .exec ol>li{counter-increment:s;margin:0;padding-left:66px;position:relative;align-self:start}
-.exec ol>li::before{content:counter(s);position:absolute;left:0;top:-6px;font:800 54px/1 var(--display);color:var(--purple)}
+.exec ol>li::before{content:counter(s);position:absolute;left:0;top:-6px;font:800 54px/1 var(--display);color:var(--accent)}
 .exec h3{margin:0 0 10px;font:700 34px/1.15 var(--display);color:var(--ink)} .exec ul{margin:0 0 0 24px;font-size:26px;line-height:1.35} .exec ul li{margin:0 0 6px}
 /* chart with a right-hand "Key takeaways" panel */
 .with-take{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,1fr);gap:24px;height:100%}
-.take{display:flex;flex-direction:column;background:var(--ecru);border-radius:12px;padding:20px 22px} .take h3{margin:0 0 14px;font-size:22px;color:var(--ink)}
+.take{display:flex;flex-direction:column;background:var(--panel);border-radius:12px;padding:20px 22px} .take h3{margin:0 0 14px;font-size:22px;color:var(--ink)}
 .take ul{margin:0 0 0 18px;font-size:20.5px;line-height:1.4} .take li{margin:0 0 18px}
 .with-take>div:first-child{display:flex;flex-direction:column;min-height:0} .with-take .xp-btn{align-self:flex-start}
 .body:has(>.fill){display:flex;flex-direction:column}
@@ -97,29 +97,29 @@ svg.chart text{fill:var(--ink)} svg.chart text.m{fill:var(--purple)} svg.chart t
 .next{align-self:flex-end;margin-top:auto;padding:6px 26px 6px 12px;font:600 12.5px var(--mono);color:var(--paper);background:var(--ink);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%)}
 /* option cards */
 .cards{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:16px}
-.card{background:var(--ecru);border-radius:6px;padding:14px 16px;border-left:3px solid var(--light)} .card.pick{border-left-color:var(--blue)}
+.card{background:var(--panel);border-radius:6px;padding:14px 16px;border-left:3px solid var(--light)} .card.pick{border-left-color:var(--blue)}
 .card h3{margin:4px 0 8px;color:var(--ink)} .card p{margin:0 0 8px;font-size:14.5px}
-.tag{font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--purple)} .pick .tag{color:var(--blue)}
+.tag{font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)} .pick .tag{color:var(--blue)}
 /* question slide: prompts beside an empty capture panel */
 .q{display:grid;grid-template-columns:1fr 1.4fr;gap:32px;height:100%}
-.notes{background:var(--ecru);border-radius:6px;padding:12px 16px} .notes h3{margin:0}
+.notes{background:var(--panel);border-radius:6px;padding:12px 16px} .notes h3{margin:0}
 /* draft stamp for mock or unverified numbers */
 .mock{position:absolute;top:16px;right:20px;padding:2px 10px;border:2px dashed var(--red);border-radius:4px;color:var(--red);font:700 12px var(--mono);letter-spacing:.1em;text-transform:uppercase}
 /* click-to-expand detail panel; .corr is the red "Corrected" variant. interact.js copies each
    panel onto its own print page after its slide. */
-.xp-btn{display:inline-flex;align-items:center;gap:6px;padding:3px 12px;font:600 13px var(--display);color:var(--purple);background:var(--paper);border:2px solid var(--purple);border-radius:14px;cursor:pointer}
-.xp-btn.corr{color:#fff;background:var(--red);border-color:var(--red)} .xp-btn[aria-expanded=true]{background:var(--purple);color:var(--paper)} .xp-btn.corr[aria-expanded=true]{background:var(--paper);color:var(--red)}
+.xp-btn{display:inline-flex;align-items:center;gap:6px;padding:3px 12px;font:600 13px var(--display);color:var(--accent);background:var(--paper);border:2px solid var(--accent);border-radius:14px;cursor:pointer}
+.xp-btn.corr{color:#fff;background:var(--red);border-color:var(--red)} .xp-btn[aria-expanded=true]{background:var(--accent);color:var(--paper)} .xp-btn.corr[aria-expanded=true]{background:var(--paper);color:var(--red)}
 .xp-btn:focus-visible,.tab-bar button:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
-.xp-panel{position:absolute;top:60px;right:20px;z-index:4;width:540px;max-height:560px;overflow:auto;padding:14px 18px;background:var(--paper);border:2px solid var(--purple);border-left-width:8px;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.25);font-size:14.5px;line-height:1.45}
-.xp-panel.corr,.xp-print.corr{border-color:var(--red)} .xp-panel h4,.xp-print h4{margin:0 0 8px;font:600 16px var(--display);color:var(--purple)} .xp-panel p,.xp-print p{margin:0 0 8px}
+.xp-panel{position:absolute;top:60px;right:20px;z-index:4;width:540px;max-height:560px;overflow:auto;padding:14px 18px;background:var(--paper);border:2px solid var(--accent);border-left-width:8px;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.25);font-size:14.5px;line-height:1.45}
+.xp-panel.corr,.xp-print.corr{border-color:var(--red)} .xp-panel h4,.xp-print h4{margin:0 0 8px;font:600 16px var(--display);color:var(--accent)} .xp-panel p,.xp-print p{margin:0 0 8px}
 .xp-print{display:none}
 /* scenario toggle: one pane on screen, all panes side by side in print */
-.tab-bar{display:flex;gap:6px;margin:0 0 10px} .tab-bar button{padding:4px 14px;font:600 13px var(--display);color:var(--purple);background:var(--paper);border:1px solid var(--light);border-radius:14px;cursor:pointer}
+.tab-bar{display:flex;gap:6px;margin:0 0 10px} .tab-bar button{padding:4px 14px;font:600 13px var(--display);color:var(--accent);background:var(--paper);border:1px solid var(--light);border-radius:14px;cursor:pointer}
 .tab-bar button[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
-.tab-panel>h4{display:none;margin:0 0 4px;font:600 14px var(--display);color:var(--purple)}
+.tab-panel>h4{display:none;margin:0 0 4px;font:600 14px var(--display);color:var(--accent)}
 .tip{position:fixed;z-index:50;pointer-events:none;max-width:420px;padding:5px 9px;font:600 12.5px var(--display);color:var(--paper);background:var(--ink);border-radius:4px;font-variant-numeric:tabular-nums}
 @media print{
   .xp-btn,.xp-panel,.tab-bar,.tip{display:none!important} .n{border:0}
-  .xp-print{display:block;box-sizing:border-box;width:1280px;height:720px;padding:40px 64px;font-size:16px;line-height:1.5;color:var(--ink);background:var(--paper);border-left:8px solid var(--purple);page-break-after:always;break-after:page}
+  .xp-print{display:block;box-sizing:border-box;width:1280px;height:720px;padding:40px 64px;font-size:16px;line-height:1.5;color:var(--ink);background:var(--paper);border-left:8px solid var(--accent);page-break-after:always;break-after:page}
   .tabs,.with-take .tabs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:24px} .tab-panel,.tab-panel[hidden]{display:block!important} .tab-panel>h4{display:block}
 }

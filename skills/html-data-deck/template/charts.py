@@ -219,7 +219,7 @@ def flow(steps, label, box, highlight=()):
     for i, (name, sub) in enumerate(steps):
         x = i * (bw + gap)
         q = name in highlight
-        out.append(_box(x, y, bw, bh, "f-ecru" if q else "f-paper", "s-red dash" if q else "s-light", 2.5 if q else 1.5))
+        out.append(_box(x, y, bw, bh, "f-panel" if q else "f-paper", "s-red dash" if q else "s-light", 2.5 if q else 1.5))
         if q:
             out.append(_t(x + bw / 2, y - 10, "? in question", "m", "middle", 14, "700"))
         out.append(_lines(x + bw / 2, y + bh / 2 - 8, name, int(bw / 9.5), anchor="middle", size=17, weight="700"))
@@ -237,11 +237,11 @@ def cycle(steps, label, box, center=""):
     rx, ry = w / 2 - 110, h / 2 - 34
     pt = lambda a: (cx + rx * math.cos(a), cy + ry * math.sin(a))  # noqa: E731
     ang = [-math.pi / 2 + 2 * math.pi * i / n for i in range(n)]
-    out = [f'<ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="{rx:.1f}" ry="{ry:.1f}" class="f-none s-purple" stroke-width="2"/>']
+    out = [f'<ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="{rx:.1f}" ry="{ry:.1f}" class="f-none s-accent" stroke-width="2"/>']
     for i in range(n):
         m = ang[i] + math.pi / n
         x, y = pt(m)
-        out.append(_head(x, y, math.atan2(ry * math.cos(m), -rx * math.sin(m)), "purple", 14))
+        out.append(_head(x, y, math.atan2(ry * math.cos(m), -rx * math.sin(m)), "accent", 14))
     for a, s in zip(ang, steps):
         x, y = pt(a)
         out.append(_box(x - 100, y - 26, 200, 52, "f-paper", "s-ink", 1.5))
@@ -259,13 +259,13 @@ def fishbone(problem, causes, label, box):
     k = math.ceil(len(causes) / 2)
     gap = (x_head - 200) / k
     reach = sy - 34
-    out = [_arrow(20, sy, x_head - 4, sy, "ink"), _box(x_head, sy - 46, hw, 92, "f-ecru", "s-ink", 2)]
+    out = [_arrow(20, sy, x_head - 4, sy, "ink"), _box(x_head, sy - 46, hw, 92, "f-panel", "s-ink", 2)]
     out.append(_lines(x_head + hw / 2, sy - 6, problem, 20, anchor="middle", size=16, weight="700"))
     for i, (cat, items) in enumerate(causes):
         up = i % 2 == 0
         xb = 80 + gap * (i // 2 + 1)
         xe, ye = xb - reach * 0.45, (sy - reach) if up else (sy + reach)
-        out.append(f'<line x1="{xb:.1f}" y1="{sy:.1f}" x2="{xe:.1f}" y2="{ye:.1f}" class="s-purple" stroke-width="2"/>')
+        out.append(f'<line x1="{xb:.1f}" y1="{sy:.1f}" x2="{xe:.1f}" y2="{ye:.1f}" class="s-accent" stroke-width="2"/>')
         out.append(_t(xe, ye - 10 if up else ye + 22, cat, anchor="middle", size=15, weight="700"))
         for m, item in enumerate(items):
             f = (m + 1) / (len(items) + 1)
@@ -276,7 +276,7 @@ def fishbone(problem, causes, label, box):
 def gantt(lanes, periods, gates, label, box):
     """Workstreams and dates: one swim lane per team. lanes: [(team, [(task,
     start, end, done)])] in period indexes (end exclusive); done bars are solid
-    ink, planned bars ecru with a dashed outline; gates: [(name, at)] diamonds."""
+    ink, planned bars on the panel color with a dashed outline; gates: [(name, at)] diamonds."""
     w, h = box
     l, top, bottom = 20 + 8 * max(len(t) for t, _ in lanes), 30, 50
     lh = (h - top - bottom) / len(lanes)
@@ -290,14 +290,14 @@ def gantt(lanes, periods, gates, label, box):
         out.append(_t(0, y + lh / 2 + 5, team, size=14, weight="600"))
         for task, a, z, done in tasks:
             tip = _tip(f"{team} · {task}: {periods[a]} to {periods[z - 1]}")
-            cls = "f-ink s-ink" if done else "f-ecru s-ink dash"
+            cls = "f-ink s-ink" if done else "f-panel s-ink dash"
             out.append(f'<rect x="{X(a) + 2:.1f}" y="{y + (lh - bh) / 2:.1f}" width="{(z - a) * cw - 4:.1f}" height="{bh:.1f}" rx="4" class="{cls}" stroke-width="1.2"{tip}/>')
             out.append(_t(X(a) + 12, y + lh / 2 + 5, task, "on" if done else "", size=13.5))
     yb = top + len(lanes) * lh
     for name, at in gates:
         x = X(at)
-        out.append(f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{top}" y2="{yb:.1f}" class="s-purple dash" stroke-width="1.2"/>')
-        out.append(f'<polygon points="{x:.1f},{yb + 2:.1f} {x + 9:.1f},{yb + 11:.1f} {x:.1f},{yb + 20:.1f} {x - 9:.1f},{yb + 11:.1f}" class="f-purple"{_tip(f"Gate: {name}")}/>')
+        out.append(f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{top}" y2="{yb:.1f}" class="s-accent dash" stroke-width="1.2"/>')
+        out.append(f'<polygon points="{x:.1f},{yb + 2:.1f} {x + 9:.1f},{yb + 11:.1f} {x:.1f},{yb + 20:.1f} {x - 9:.1f},{yb + 11:.1f}" class="f-accent"{_tip(f"Gate: {name}")}/>')
         out.append(_t(x, yb + 38, name, "m", "middle", 13, "600"))
     return _svg(box, label, "".join(out))
 
@@ -315,7 +315,7 @@ def hierarchy(root, children, label, box):
     for i, (name, items) in enumerate(children):
         x = i * cw + cw / 2
         out.append(f'<line x1="{x}" x2="{x}" y1="72" y2="92" class="s-ink"/>')
-        out.append(_box(x - cw / 2 + 8, 92, cw - 16, 46, "f-ecru", "s-ink"))
+        out.append(_box(x - cw / 2 + 8, 92, cw - 16, 46, "f-panel", "s-ink"))
         out.append(_t(x, 121, name, anchor="middle", size=15, weight="700"))
         for m, item in enumerate(items):
             y = 152 + m * ih
