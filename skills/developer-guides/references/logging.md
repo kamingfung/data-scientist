@@ -19,7 +19,7 @@ Kedro's runner and `DataCatalog` automatically emit:
 
 Do not add `logger.info("Starting node X")` or `logger.info("Saving output")`.
 
-## 3. Mandatory Context (The 3 a.m. Actionability Test)
+## 3. Mandatory Log Context
 
 Every `WARNING` and `ERROR` log must tell an on-call engineer what happened without opening a debugger:
 

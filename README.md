@@ -16,7 +16,7 @@
 A self-contained agent plugin that puts a disciplined senior data scientist inside your AI agent:
 
 - **Before writing code:** states a hypothesis, builds a custom MECE `if/then` issue tree, and prioritizes the 80/20 lever.
-- **When writing code:** enforces pure functions, top-down order, Pandera schema boundaries, strict `params["key"]` access, and `3 a.m.`-actionable logs.
+- **When writing code:** enforces pure functions, top-down order, Pandera schema boundaries, strict `params["key"]` access, and actionable logs with entity, time window, and row count.
 - **When reviewing code:** checks soundness, baselines, and data contracts before style, anchoring findings inline with a three-round cap.
 - **When communicating:** leads with the decision, builds title-only outlines before rendering slides, and ships self-contained `1280x720` HTML data decks where every chart and number comes from real data.
 

@@ -17,7 +17,7 @@ Reference standards for Python and Kedro engineering. Read the relevant guide in
 | [references/parameters.md](references/parameters.md) | Parameter nesting, narrow slicing, strict access, YAML quoting |
 | [references/schema_validation.md](references/schema_validation.md) | Pandera boundaries, tuple-coercion bug, dtype safety, Parquet |
 | [references/unit_test.md](references/unit_test.md) | Test structure, realistic fixtures, Pandera vs. unit tests, mocking rules |
-| [references/logging.md](references/logging.md) | Logger usage, 3 a.m. actionability test, levels, lazy `%` formatting |
+| [references/logging.md](references/logging.md) | Logger usage, mandatory log context, levels, lazy `%` formatting |
 | [references/parallelism.md](references/parallelism.md) | Concurrency and parallelism patterns |
 | [references/visualization.md](references/visualization.md) | Colorblind-safe palettes, paired encodings, Mermaid vs. Graphviz |
 | [references/writing_standards.md](references/writing_standards.md) | ASD-STE100 prose, terminology, reproducible evidence, markdown layout |
