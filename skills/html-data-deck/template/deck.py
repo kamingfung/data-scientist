@@ -139,7 +139,7 @@ def exec_summary(lead, sections):
 
 
 def takeaways(main, points, next_):
-    """Chart slide body: ``main`` (the chart) on the left 3/4, an ecru "Key
+    """Chart slide body: ``main`` (the chart) on the left 3/4, a panel "Key
     takeaways" panel on the right with 2-3 points [(label, sentence)] and an
     ink "Next:" arrow tag that leads into the next slide."""
     li = "".join(f"<li><b>{lab}:</b> {txt}</li>" for lab, txt in points)
