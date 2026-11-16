@@ -1,10 +1,10 @@
 # Parameters
 
-Rules for organizing, naming, and accessing Kedro parameters. For how parameters are wired into nodes, see [pipeline.md](pipeline.md).
+Rules for organizing, naming, and accessing pipeline parameters. For how parameters are wired into tasks/nodes, see [pipeline.md](pipeline.md).
 
 ## File Organization
 
-Parameters live in `conf/base/parameters.yml` or under `conf/base/parameters/`, one file per domain:
+Store parameters in structured YAML or config files (e.g. `conf/base/parameters.yml` or `conf/base/parameters/`), one file per domain:
 
 ```text
 conf/base/
@@ -23,7 +23,7 @@ reporting:
 
 Avoid flat parameter keys. Nesting makes it clear which stage uses what and prevents name collisions across domains.
 
-## Accessing Parameters in Nodes
+## Accessing Parameters in Tasks
 
 Pass the narrowest possible slice — not the whole domain dict:
 

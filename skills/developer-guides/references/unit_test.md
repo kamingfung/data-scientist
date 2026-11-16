@@ -40,7 +40,7 @@ def test_create_model_input_table_duplicate_company_raises(
 
 ## 2. Production-Data-Driven Fixtures & Edge Cases
 
-Synthetic fixtures invented from guesswork miss real data quirks. When building fixtures for pipeline nodes, inspect real catalog data in a scratch script or notebook (`KedroSession.create()`), profile it, and extract a 10–50 row representative subset:
+Synthetic fixtures invented from guesswork miss real data quirks. When building fixtures for pipeline tasks, inspect real source or catalog data in a scratch script or notebook, profile it, and extract a 10–50 row representative subset:
 
 | Dimension to profile | What to include in fixture |
 | --- | --- |

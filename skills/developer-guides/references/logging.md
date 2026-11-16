@@ -1,16 +1,16 @@
 # Logging Guide
 
-Standards for structured, actionable logging across Kedro pipelines.
+Standards for structured, actionable logging across Python data and ML pipelines.
 
 ## 1. Key Rules
 
 - Use one shared project logger, created once and imported where needed; do not call `logging.getLogger` in each module.
 - Never log secrets, passwords, API keys, tokens, or PII.
-- Only log what Kedro does not already emit.
+- Only log what your orchestrator does not already emit.
 
-## 2. What Kedro Already Logs (Do Not Duplicate)
+## 2. What Orchestrators Already Log (Do Not Duplicate)
 
-Kedro's runner and `DataCatalog` automatically emit:
+Pipeline orchestrators (such as Kedro, Dagster, Prefect, or Airflow) automatically emit:
 
 - **Node start and finish:** `Running node: ...` / `Completed node: ...`
 - **Dataset loading and saving:** `Loading data from ...` / `Saving data to ...`
@@ -51,7 +51,7 @@ logger.debug("Merged result shape: %s", merged.shape)
 | Level | When to use |
 | --- | --- |
 | `DEBUG` | Diagnostic details (shapes, intermediate counts) needed only when troubleshooting |
-| `INFO` | Meaningful pipeline milestones not already emitted by Kedro |
+| `INFO` | Meaningful pipeline milestones not already emitted by the orchestrator |
 | `WARNING` | Unexpected condition or expected data deviation where execution continues |
 | `ERROR` | Operation failed or data contract violated; include input context and exception |
 | `CRITICAL` | Fatal error preventing the program from continuing |

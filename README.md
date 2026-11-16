@@ -27,7 +27,7 @@ No external MCP servers. No build step. Just markdown skills, reference guides, 
 ### Engineering & problem solving
 
 1. **Frame before analyzing:** [`structured-problem-solving`](skills/structured-problem-solving/SKILL.md) sets an initial hypothesis within five minutes, segments totals, writes word-first formulas, and runs pre-mortems before irreversible steps.
-2. **Fail loud at the boundary:** [`developer-guides`](skills/developer-guides/SKILL.md) splits engineering standards into focused references covering Python/Kedro pipelines, strict parameter slicing, Pandera validation, unit tests, logging, parallelism, and colorblind-safe visualization.
+2. **Fail loud at the boundary:** [`developer-guides`](skills/developer-guides/SKILL.md) splits engineering standards into focused references covering Python data pipelines, strict parameter slicing, Pandera validation, unit tests, logging, parallelism, and colorblind-safe visualization.
 3. **Review soundness first:** [`code-review`](skills/code-review/SKILL.md) flags access blockers first, verifies logic and data contracts before style, and labels every finding with paired icon + text (`❌ must-fix`, `⚠️ should-fix`, `🤔 nice-to-have`).
 4. **Isolate branch work:** [`worktrees`](skills/worktrees/SKILL.md) standardizes creating, using, and cleaning up git worktrees.
 
@@ -40,7 +40,7 @@ No external MCP servers. No build step. Just markdown skills, reference guides, 
 
 | Skill | What it does | Key resources |
 | :--- | :--- | :--- |
-| [`developer-guides`](skills/developer-guides/SKILL.md) | Python/Kedro code style, parameters, Pandera schemas, unit tests, logging, parallelism, visualization, technical writing, and agent defaults | [13 guides](skills/developer-guides/references/README.md) |
+| [`developer-guides`](skills/developer-guides/SKILL.md) | Python pipeline code style, parameters, Pandera schemas, unit tests, logging, parallelism, visualization, technical writing, and agent defaults | [13 guides](skills/developer-guides/references/README.md) |
 | [`code-review`](skills/code-review/SKILL.md) | PR and branch review workflow: access blockers first, soundness before style, inline findings, and a three-round cap | [`checklist.md`](skills/code-review/references/checklist.md) |
 | [`worktrees`](skills/worktrees/SKILL.md) | Git worktree creation, usage, and cleanup | — |
 | [`structured-problem-solving`](skills/structured-problem-solving/SKILL.md) | Hypothesis-driven decomposition, MECE `if/then` issue trees, 80/20 drill-down, pre-mortems, evidence calibration, incident triage, and top-down synthesis | [`frameworks.md`](skills/structured-problem-solving/references/frameworks.md), [`research-and-execution.md`](skills/structured-problem-solving/references/research-and-execution.md), [`postmortem.md`](skills/structured-problem-solving/assets/postmortem.md) |

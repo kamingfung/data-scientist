@@ -1,6 +1,6 @@
 # Code Style Guide
 
-Practical Python and Kedro coding standards for this repository.
+Practical Python coding standards for data and ML pipelines.
 
 ## Before You Write
 

@@ -2,6 +2,6 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "data-scientist",
   "version": "0.2.0",
-  "description": "Self-contained data scientist agent plugin covering Python/Kedro engineering standards, code review, git worktrees, structured problem solving, and consulting-style executive communication and slide creation.",
+  "description": "Self-contained data scientist agent plugin covering Python data and ML pipeline engineering standards, code review, git worktrees, structured problem solving, and consulting-style executive communication and slide creation.",
   "license": "MIT"
 }

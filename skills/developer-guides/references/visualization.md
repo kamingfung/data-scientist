@@ -28,4 +28,4 @@ Draw flow, decision, and architecture diagrams as text so they diff cleanly in v
 
 - Verify new Mermaid blocks render cleanly before committing.
 - For Graphviz, keep the `.dot` source next to the doc, render with `dot -Tsvg name.dot -o img/name.svg`, commit both, and embed the SVG.
-- Point to `kedro viz` for live, frequently changing pipeline topology instead of hand-maintaining large DAGs.
+- Use your orchestrator's UI (e.g. `kedro viz`, Dagster UI, Prefect UI) for live, frequently changing pipeline topology instead of hand-maintaining large DAGs.

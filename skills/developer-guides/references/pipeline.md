@@ -1,10 +1,10 @@
-# Kedro Pipeline Conventions
+# Pipeline Conventions
 
-Rules for adding, wiring, and naming pipelines and nodes. For parameter injection, see [parameters.md](parameters.md). For schema validation at node boundaries, see [schema_validation.md](schema_validation.md).
+Framework-agnostic rules for adding, wiring, and naming data and ML pipelines (applies to Kedro, Dagster, Prefect, Airflow, Hamilton, or plain Python orchestrators). For parameter injection, see [parameters.md](parameters.md). For schema validation at task/node boundaries, see [schema_validation.md](schema_validation.md).
 
 ## 1. Pipeline & Data Layers
 
-Each pipeline layer has a single responsibility and writes to a specific Kedro `data/` directory. Layers `01_raw`–`04_feature` are shared infrastructure; `05_model_input` onward are scoped to a specific model or report.
+Each pipeline layer has a single responsibility and writes to a distinct `data/` tier. Layers `01_raw`–`04_feature` are shared infrastructure; `05_model_input` onward are scoped to a specific model or report.
 
 | Layer | Responsibility | Data directory | Granularity |
 | --- | --- | --- | --- |
@@ -34,25 +34,27 @@ src/project_template/
         └── pipeline.py
 ```
 
-- **Node functions live in `nodes.py`; wiring lives in `pipeline.py`.** Never put transformation logic inside `pipeline.py`.
-- **Node functions are pure:** Kedro injects all datasets and parameters; never call `catalog.load()` inside a node or log node start/finish (see [logging.md](logging.md)).
+- **Task/node functions live in `nodes.py` (or `tasks.py`); wiring lives in `pipeline.py`.** Never put transformation logic inside the DAG wiring file.
+- **Task/node functions are pure:** the orchestrator injects all datasets and parameters; never read files or call `catalog.load()` inside a transform function, and never duplicate orchestrator start/finish logs (see [logging.md](logging.md)).
 
-## 3. `create_pipeline()`, Naming & Tags
+## 3. Naming, Wiring & Tags
 
-- Every `pipeline.py` exposes `create_pipeline(**kwargs) -> Pipeline`.
-- Name every node after its function (`name="preprocess_companies_node"` or `name="preprocess_companies"`) so runner logs, `ProfileHook` tables, and Kedro-Viz stay unambiguous. Never use generic names like `"step_1"`.
-- Use a list for `inputs` when positional order matches the function signature, or a dict to bind arguments explicitly by name.
-- Tag nodes with their domain (`tags=["data_processing"]`) so slices can be executed via `kedro run --tags=...`.
+- Expose a clear pipeline entrypoint per domain (e.g. `create_pipeline(**kwargs) -> Pipeline`, `@job`, or `@flow`).
+- Name every task/node after its function (`name="preprocess_companies"`) so runner logs, profiling tables, and DAG UIs stay unambiguous. Never use generic names like `"step_1"`.
+- Bind arguments explicitly by name (e.g. a dict of `inputs`) whenever positional order is non-obvious.
+- Tag tasks/nodes with their domain (`tags=["data_processing"]`) so subsets can be executed independently.
 
 ## 4. Adding a New Pipeline
 
-1. Create `src/project_template/pipelines/<domain>/` with `__init__.py`, `nodes.py`, `pipeline.py`, and `schemas.py` (if introducing new contracts).
-2. Add catalog entries in `conf/base/catalog.yml` (using `ParquetDataset` for intermediate tables).
-3. Add parameters in `conf/base/parameters.yml` (nested under `<domain>:`).
-4. Register the pipeline in `src/project_template/pipeline_registry.py`.
-5. Add unit tests under `tests/pipelines/<domain>/test_nodes.py`.
+1. Create a domain module/package (e.g. `src/<project>/pipelines/<domain>/`) with pure transform functions (`nodes.py` / `tasks.py`), DAG wiring (`pipeline.py`), and Pandera contracts (`schemas.py`).
+2. Register dataset I/O entries (using Parquet for intermediate tables).
+3. Add parameters in the domain config (nested under `<domain>:`).
+4. Register the pipeline in the project's pipeline registry or entrypoint.
+5. Add unit tests under `tests/pipelines/<domain>/`.
 
 ## 5. Running Pipelines
+
+Standardize common operations behind a `justfile` or `Makefile` regardless of orchestrator (example using Kedro + `uv` + MLflow):
 
 ```zsh
 just run                                    # Run default pipeline (uv run kedro run)

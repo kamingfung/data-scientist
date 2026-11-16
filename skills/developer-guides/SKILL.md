@@ -1,11 +1,11 @@
 ---
 name: developer-guides
-description: Engineering standards and developer guides for Python code style, Kedro pipelines, parameters, schema validation, unit tests, logging, parallelism, visualization, technical writing, and agent defaults. Use when writing or reviewing Python/Kedro code, tests, YAML configs, figures, or documentation.
+description: Engineering standards and developer guides for Python code style, data and ML pipelines, parameters, schema validation, unit tests, logging, parallelism, visualization, technical writing, and agent defaults. Use when writing or reviewing Python pipeline code, tests, YAML configs, figures, or documentation.
 ---
 
 # Developer Guides
 
-Reference standards for Python and Kedro engineering. Read the relevant guide in `references/` before writing or reviewing code in that domain.
+Reference standards for Python data and ML pipeline engineering. Read the relevant guide in `references/` before writing or reviewing code in that domain.
 
 | Reference | Scope |
 | --- | --- |
@@ -13,7 +13,7 @@ Reference standards for Python and Kedro engineering. Read the relevant guide in
 | [references/agent-defaults.md](references/agent-defaults.md) | Critical thinking posture, communication style, parallel execution, remote writes, answering reviews |
 | [references/coding-guidelines.md](references/coding-guidelines.md) | Think before coding, simplicity first, surgical changes, explanation cascade, goal-driven execution, American English |
 | [references/code_style.md](references/code_style.md) | Pure functions, readability, top-down order, fail-loud error handling |
-| [references/pipeline.md](references/pipeline.md) | Kedro data layers, pipeline structure, node naming, adding pipelines |
+| [references/pipeline.md](references/pipeline.md) | Data layers, pipeline structure, task/node naming, adding pipelines |
 | [references/parameters.md](references/parameters.md) | Parameter nesting, narrow slicing, strict access, YAML quoting |
 | [references/schema_validation.md](references/schema_validation.md) | Pandera boundaries, tuple-coercion bug, dtype safety, Parquet |
 | [references/unit_test.md](references/unit_test.md) | Test structure, realistic fixtures, Pandera vs. unit tests, mocking rules |
