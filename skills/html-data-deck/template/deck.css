@@ -3,15 +3,16 @@
    stacks, so the file renders offline with no font payload.
    Slides are fixed 1280x720; deck.js scales them to the window. */
 :root{
-  --ink:#1F2A44;     /* titles, body text, totals */
-  --accent:#3A5A8C;  /* kicker, h3, notes, value labels */
-  --blue:#00669E;    /* gain / proposed arm */
-  --red:#B83A1B;     /* loss / negative KPI */
-  --light:#A8B3C7;   /* rules, footer, baseline bars */
+  --ink:#1A1A1A;     /* titles, body text, totals, series 1 */
+  --accent:#0072B2;  /* kicker, h3, notes, value labels */
+  --blue:#0072B2;    /* series 2, gain, the highlight on grey charts (Okabe-Ito blue) */
+  --red:#D55E00;     /* loss / negative KPI (Okabe-Ito vermilion) */
+  --orange:#E69F00;  /* series 3 (Okabe-Ito orange) */
+  --light:#BBBBBB;   /* context marks, rules, footer, baseline bars */
   --panel:#F2F4F7;    /* tile, table header, assumptions box */
   --gray:#9E9E9E;    /* unexplained / residual */
   --paper:#FFFFFF;
-  --tint:#E6EEF7;    /* "Why" card, a light blue tint */
+  --tint:#E5F0F7;    /* "Why" card, a light blue tint */
   --display:"Avenir Next","Helvetica Neue",Helvetica,"Segoe UI",Arial,sans-serif;
   --text:Charter,"Iowan Old Style","Source Serif 4",Georgia,Cambria,serif;
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
@@ -61,8 +62,8 @@ footer::after{content:attr(data-n);white-space:nowrap}
 /* SVG charts color by class, so a token change recolors them */
 svg.chart{display:block;font-family:var(--display);font-size:12px;overflow:visible}
 svg.chart text{fill:var(--ink)} svg.chart text.m{fill:var(--accent)} svg.chart text.on{fill:var(--paper)}
-.f-ink{fill:var(--ink)} .f-accent{fill:var(--accent)} .f-blue{fill:var(--blue)} .f-red{fill:var(--red)} .f-light{fill:var(--light)} .f-gray{fill:var(--gray)} .f-panel{fill:var(--panel)} .f-paper{fill:var(--paper)} .f-none{fill:none}
-.s-paper{stroke:var(--paper)} .s-ink{stroke:var(--ink)} .s-accent{stroke:var(--accent)} .s-blue{stroke:var(--blue)} .s-red{stroke:var(--red)} .s-light{stroke:var(--light)} .s-gray{stroke:var(--gray)}
+.f-ink{fill:var(--ink)} .f-accent{fill:var(--accent)} .f-blue{fill:var(--blue)} .f-red{fill:var(--red)} .f-orange{fill:var(--orange)} .f-light{fill:var(--light)} .f-gray{fill:var(--gray)} .f-panel{fill:var(--panel)} .f-paper{fill:var(--paper)} .f-none{fill:none}
+.s-paper{stroke:var(--paper)} .s-ink{stroke:var(--ink)} .s-accent{stroke:var(--accent)} .s-blue{stroke:var(--blue)} .s-red{stroke:var(--red)} .s-orange{stroke:var(--orange)} .s-light{stroke:var(--light)} .s-gray{stroke:var(--gray)}
 .dash{stroke-dasharray:6 4} .hit{fill:transparent;cursor:crosshair} [data-tip]:hover{opacity:.75}
 /* a number filled from data; hover shows its source (interact.js) */
 .n{font-variant-numeric:tabular-nums;border-bottom:1px dotted var(--light);cursor:help}
