@@ -20,7 +20,7 @@ from __future__ import annotations
 import html
 import math
 
-CAT = ("ink", "blue", "red", "light")  # CVD-safe categorical order (SKILL.md Colors)
+CAT = ("ink", "blue", "orange", "light")  # 3 series colors, then context grey for "other" (SKILL.md Colors)
 STATUS = {"kept": ("✅", "blue"), "dropped": ("✖", "red"), "open": ("⏸", "gray")}
 
 

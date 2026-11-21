@@ -110,12 +110,19 @@ Deck order that works: title, `0 · Executive summary`, `0.1 · Headline` (tiles
 
 ## Colors
 
-- Use the tokens in `template/deck.css`: ink `#1F2A44` text and totals, accent `#3A5A8C` labels, blue `#00669E` gains, red `#B83A1B` losses, light `#A8B3C7` baselines and rules, panel `#F2F4F7` panels, tint `#E6EEF7` the second card, gray `#9E9E9E` unexplained. Swap the values for your own brand, and keep text contrast at 4.5:1 or more on white, panel and tint.
-- For categorical series use ink, blue, red, light in that order: they differ in lightness as well as hue, so they stay apart for colorblind readers.
-- Color by meaning first: when a color has a fixed meaning in your domain (for example red for loss), keep it on every slide.
-- Pair every color with a second encoding: hatch for low confidence, whisker for range, dashed for baseline, or a direct label.
-- In each chart, give one accent color to the evidence the title claims; draw context in neutrals (light, gray). Semantic colors win where the meaning is fixed. Remove series, labels and gridlines that do not help the comparison.
-- Keep text contrast at least 4.5:1, or 3:1 for large text.
+Data colors come from the Okabe–Ito palette, which stays distinct for the common color-vision deficiencies. The tokens live in `template/deck.css`; swap them for your own brand only after checking the same distances.
+
+- Tokens: ink `#1A1A1A` text, totals and series 1; blue `#0072B2` series 2, gains and the highlight; orange `#E69F00` series 3; red (vermilion) `#D55E00` losses; light `#BBBBBB` context marks, rules and baselines; gray `#9E9E9E` unexplained; accent `#0072B2` labels; panel `#F2F4F7` and tint `#E5F0F7` cards.
+- Use at most 3 series colors, in the order ink, blue, orange (smallest pair CIEDE2000 22 under simulated color-vision deficiency and in grayscale, Machado 2009). Draw any further category in the light context grey, or switch to small multiples.
+- Highlight one mark per chart. When every other mark is light grey, the highlight is blue (CIEDE2000 26 from the grey). When the chart already has series colors, mark the singled-out series with a bold label and a thicker line instead of a new color: no Okabe–Ito color stays above ΔE 13 from both blue and orange. The title says whether the highlight is good or bad news.
+- Draw context marks (other bars and lines, stems, bands) in light grey.
+- Gains and losses use blue and vermilion. They are only ΔE 8 apart for some readers, so a signed label (+24, −7) and the side of zero always carry the sign too. A gain/loss chart has no other highlight.
+- Give each line one second encoding: markers on a solid line, or a dash pattern with no markers, never both.
+- Draw no gridlines, except on a multi-series line chart read off its y-axis: light horizontal gridlines and a vertical legend in line-end order. Never on scatter plots.
+- Label values directly; write negative numbers with the true minus (−); never rotate tick labels (thin them instead).
+- State units on every chart. Give masses in kg (or thousands or millions of kg), not tons: a metric ton and a US ton differ.
+- Color by meaning first: when a color has a fixed meaning in your domain, keep it on every slide.
+- Keep text contrast at least 4.5:1, or 3:1 for large text. Orange (2.3:1) and vermilion (3.9:1) are fill colors; label them in ink.
 
 ## Sources
 
@@ -215,7 +222,7 @@ Pass 3, design and filing:
 - [ ] Nothing overflows: render with headless Chrome and look at every slide.
 - [ ] Every chart fills its slot (full body, or the left 3/4 next to takeaways); no fixed-size chart with empty space below.
 - [ ] No chart touches or overlaps its neighbors: at least 16px clear to the title, takeaways panel, note, assumptions box and footer, and no label or legend clipped at the SVG edge. Check every chart slide in the headless-Chrome render and in print.
-- [ ] One accent color per chart; every color has a second encoding; categorical order is the CVD-safe one; text contrast ≥ 4.5:1.
+- [ ] One accent color per chart; every color has a second encoding; at most 3 series colors (ink, blue, orange), context in light grey, one encoding per line; text contrast ≥ 4.5:1.
 - [ ] Footer has topic, as-of date, baseline, ticket key; `n / N` renders.
 - [ ] No `<img>`, no external script, font or stylesheet (`grep -E 'src="http|href="http|<img|@import|url\(http'` returns nothing); fonts are the system stacks in `deck.css`; light house theme only.
 - [ ] Print to PDF: one slide per page, detail panels on their own pages, scenario panes side by side, nothing cut off.
